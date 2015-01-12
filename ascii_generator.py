@@ -6,9 +6,9 @@ from asciiGeneratorUtils import *
 
 '''Steps: -convert any input image to a black and white bitmap
 	  -get dimensions of image programmatically
-    -divide image into subarrays
-    -convert each subarray to an ascii representation
-    -print ascii text into file.'''
+          -divide image into subarrays
+          -convert each subarray to an ascii representation
+          -print ascii text into file.'''
 
 subArraySize = 4
 image = Image.open('Bob_Marley.png').convert('L')
