@@ -60,7 +60,7 @@ def printCharacters(outputFile, subArrays):
     j=0
     count=0
     string=""
-    textfile = open("output.txt", "w")
+    textfile = open(outputFile, "w")
     numBoxes=len(subArrays)
     numColinBox=len(subArrays[0])
     print numBoxes
