@@ -1,19 +1,17 @@
 extends layout
-
-my_options = {"this":"something", "that":"something else"}
-
 block content
   h1= title
-  p Welcome to #{title}, choose your image 
-  
+  p Welcome to #{title}, choose your image   
     form(action="/", method="post", enctype="multipart/form-data")
-      input(type="file", name="displayImage")
+      input(type="file", name="displayImage")      
       p Character resolution value: 
       select(id="subArraySize" name="subArraySize")
         option(value="4") 4
         option(value="6") 6
         option(value="8") 8
-      input(type="submit", value="Submit")
-  
+  button(onclick='clck()') Get character!
+
   p Ascii art :
-  p(style='white-space:pre; font-family:"Courier New"') #{ascii}
+  p(id="asciiArt", style='white-space:pre; font-family:"Courier New"') #{ascii}
+  script(type='text/javascript', src='javascripts/index.js')		 
+
