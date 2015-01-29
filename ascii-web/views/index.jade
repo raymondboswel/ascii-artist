@@ -2,14 +2,15 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}, choose your image   
-    form(action="/", method="post", enctype="multipart/form-data")
-      input(type="file", name="displayImage")      
+    form(id="form", action="/", method="post", enctype="multipart/form-data")
+      input(id="fileUpload", type="file", name="displayImage")      
       p Character resolution value: 
       select(id="subArraySize" name="subArraySize")
         option(value="4") 4
         option(value="6") 6
         option(value="8") 8
-  button(onclick='clck()') Get character!
+      button(type="submit") Formsubmit
+  button(onclick='clck()') Submit
 
   p Ascii art :
   p(id="asciiArt", style='white-space:pre; font-family:"Courier New"') #{ascii}
